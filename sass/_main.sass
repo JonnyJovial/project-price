@@ -1,0 +1,140 @@
+
+h1
+    font-size: 4.1rem
+    font-family: 'Inter'
+    font-weight: 600
+    text-align: center
+    padding: 5.85rem 3.2rem
+
+.section-cards
+    // position: relative
+    display: flex
+    justify-content: space-evenly
+    font-size: 1.2rem
+    padding-bottom: 13rem
+    @include respond(phone)
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__arrow
+        height: 1.6rem
+        padding-left: 1rem
+        animation-name: LeftToRight
+        animation-duration: 1.5s
+        animation-delay: 0s
+        animation-timing-function: linear
+        animation-fill-mode: forwards
+        animation-iteration-count: infinite
+        -moz-animation-iteration-count: infinite
+        -webkit-animation-iteration-count: infinite
+    &__price
+        display: flex
+        flex-direction: row
+        align-items: center
+        opacity: 0
+        cursor: pointer
+        &_one
+            animation-name: RightToLeft
+            animation-duration: 1s
+            animation-delay: 2s
+            animation-timing-function: ease
+            animation-fill-mode: forwards
+
+        &_two
+            animation-name: RightToLeft
+            animation-duration: 1s
+            animation-delay: 1s
+            animation-timing-function: ease
+            animation-fill-mode: forwards
+        &_three
+            animation-name: RightToLeft
+            animation-duration: 1s
+            animation-delay: 3s
+            animation-timing-function: ease
+            animation-fill-mode: forwards
+    &__currency
+        transform: translateY(-1rem)
+        font-size: 1.5rem
+        @include respond(phone)
+            font-size: 3rem
+        &:hover
+            color: Crimson
+            transition: .5s
+    &__title-price
+        font-size: 3.8rem
+        font-family: 'Inter'
+        font-weight: 800
+        @include respond(phone)
+            font-size: 4rem
+
+    &__date
+        transform: translateY(1rem)
+        font-size: 1.2rem
+        @include respond(phone)
+            font-size: 3rem
+        &:hover
+            color: Crimson
+            transition: .5s
+    &__card
+        display: flex
+        flex-direction: column
+        height: 60rem
+        width: 33rem
+        background: $color-green
+        border-radius: 1.1rem
+        padding: 4.5rem 6rem 2.8rem
+        @include respond(phone)
+            margin-bottom: 2rem
+            &:last-child
+                margin-bottom: 0rem
+        hr
+            margin: 1.5rem 0
+            opacity: .2
+        &_1
+            transform: translate(10.8rem, 3rem)
+            @include respond(phone)
+                transform: translate(0,0)
+
+        &_2
+            background: #1D252B
+            z-index: 1
+            @include respond(phone)
+                order: -1
+        &_3
+            transform: translate(-10.8rem, 3rem)
+            @include respond(phone)
+                transform: translate(0,0)
+
+        ul
+            list-style: url(../img/Polygon.svg)
+
+        li
+            padding-bottom: 1.5rem
+            &:hover
+                filter: hue-rotate(220deg)
+        a
+            text-decoration: none
+            color: white
+            opacity: .8
+            font-weight: 400
+            @include respond(phone)
+                font-size: 1.68rem
+            &:hover
+                font-weight: 500
+                opacity: 1
+                // color: black
+
+    &__button
+        border: 0.864px solid #D0D0D0
+        background: $color-green
+        margin: 0 auto
+        display: block
+        width: 100%
+        box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.10)
+        margin-top: auto
+        &_red
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 0.864px solid #D66567
+            background: #BC4749

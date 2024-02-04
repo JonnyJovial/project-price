@@ -1,0 +1,54 @@
+
+.nav
+    display: flex
+    justify-content: flex-start
+    padding-top: 3.5rem
+    @include respond(phone)
+        justify-content: space-between
+    &__img
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 14rem
+        padding-left: 5rem
+        img
+            width: 2.3rem
+        p
+            font-size: 1.445rem
+            text-decoration: line-through
+    &__href
+        display: flex
+        align-items: center
+        padding-left: 8.7rem
+        padding-right: 43.7rem
+        @include respond(phone)
+            // padding-left: 0
+            // padding-right: 0
+            display: none
+        li
+            padding-left: 4.8rem
+            opacity: .8
+            &:hover
+                opacity: 1
+                transform: translateY(.2rem)
+                transition: 0.3s all
+            &:active
+                transform: translateY(0)
+                transition: 0.3s all
+            a
+                text-decoration: none
+                color: $color-white
+                opacity: 80%
+                font-size: 1.209rem
+    &__registration
+        width: 16rem
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        li
+            cursor: pointer
+
+.vector
+    background: no-repeat url(../img/Group.png)
+    background-position: 0 4rem
+    background-size: 100%

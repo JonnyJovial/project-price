@@ -1,0 +1,62 @@
+$color-green: #6A994E
+$color-white: #ffffff
+
+@mixin respond($breakpoint)
+    @if $breakpoint == -min-phone
+        @media only screen and (max-width: 400px)
+            @content
+
+    @if $breakpoint == phone
+        @media only screen and (max-width: 600px)
+            @content
+
+    @if $breakpoint == big-phone
+        @media only screen and (max-width: 800px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 950px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1300px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (max-width: 1800px)
+            @content
+
+*
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    @include respond(tab-land)
+        font-size: 55%
+    @include respond(tab-port)
+        font-size: 45%
+    @include respond(big-phone)
+        font-size: 35%
+    @include respond(phone)
+        font-size: 30%
+    @include respond(min-phone)
+        font-size: 25%
+
+body
+    background: url(../img/Pricing.png) black
+    height: 103rem
+    color: $color-white
+    font-family: 'Inter'
+    font-weight: 400
+.content-container
+    height: 93rem
+    width: 130.6rem
+    background: linear-gradient(153deg, #36603E 35.82%, #1E262C 107.75%)
+    margin: 0 auto
+    margin-top: 10rem
+    margin-bottom: 10rem
+    border-radius: 1.5rem
+    @include respond(phone)
+        height: 220rem
+        width: 90%
+
